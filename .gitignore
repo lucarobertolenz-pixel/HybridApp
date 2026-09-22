@@ -1,0 +1,14 @@
+## Xcode
+.DS_Store
+build/
+DerivedData/
+*.moved-aside
+*.xcuserstate
+*.xcscmblueprint
+*.xccheckout
+xcuserdata/
+
+## Swift Package Manager
+.swiftpm/
+.build/
+Packages/AnalysisEngineKit/.build/
