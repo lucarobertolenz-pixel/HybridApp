@@ -1,5 +1,5 @@
 import Foundation
-import HealthKit
+@preconcurrency import HealthKit
 import SwiftData
 
 /// Lädt Laufworkouts aus HealthKit, reichert sie mit Pulsdaten an und speichert

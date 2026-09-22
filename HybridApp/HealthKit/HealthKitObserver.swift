@@ -1,5 +1,5 @@
 import Foundation
-import HealthKit
+@preconcurrency import HealthKit
 import SwiftData
 
 /// Beobachtet HealthKit im Hintergrund und importiert neue Laufworkouts automatisch,
