@@ -17,6 +17,9 @@ final class HealthKitObserver {
 
     func start() {
         let query = HKObserverQuery(sampleType: .workoutType(), predicate: nil) { [weak self] _, completionHandler, error in
+            // HealthKit übergibt hier keinen Sendable-Abschlussblock; wir garantieren selbst,
+            // dass er genau einmal aufgerufen wird, wie von HKObserverQuery gefordert.
+            nonisolated(unsafe) let completionHandler = completionHandler
             guard let self, error == nil else {
                 completionHandler()
                 return
